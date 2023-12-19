@@ -53,3 +53,7 @@
   :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
 
 (package! tldr)
+
+(package! ess)
+
+(package! poly-R)

@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-;; (setq user-full-name "John Doe"
-;;       user-mail-address "john@doe.com")
+(setq user-full-name "Egor Lappo"
+      user-mail-address "egor@ccrma.stanford.edu")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -34,6 +34,12 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-flatwhite)
 
+(setq bmw/font-mono
+      "Fantasque Sans Mono")
+
+(setq doom-font (font-spec :family bmw/font-mono :size 14)
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
@@ -49,6 +55,8 @@
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
+
+(setq +latex-viewers '(pdf-tools))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
