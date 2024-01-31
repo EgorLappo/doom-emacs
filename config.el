@@ -32,7 +32,15 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+
 (setq doom-theme 'doom-flatwhite)
+
+;; (after! doom-themes
+;;   (load-theme 'doom-nano-light t))
+;; (use-package! doom-nano-modeline
+;;   :config
+;;   (doom-nano-modeline-mode 1)
+;;   (global-hide-mode-line-mode 1))
 
 (setq bmw/font-mono
       "Fantasque Sans Mono")
@@ -58,6 +66,9 @@
 
 (setq +latex-viewers '(pdf-tools))
 
+(setq haskell-stylish-on-save t)
+
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
@@ -65,6 +76,7 @@
 ;;     (setq x y))
 ;;
 ;; The exceptions to this rule:
+
 ;;
 ;;   - Setting file/directory variables (like `org-directory')
 ;;   - Setting variables which explicitly tell you to set them before their

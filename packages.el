@@ -54,6 +54,10 @@
 
 (package! tldr)
 
-(package! ess)
+;; (package! ess)
 
-(package! poly-R)
+;; (package! poly-R)
+
+(package! doom-nano-modeline
+  :recipe (:host github
+           :repo "ronisbr/doom-nano-modeline"))
